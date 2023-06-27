@@ -8,7 +8,7 @@ services:
   - docker
 
 before_install:
-  - docker build --pull --rm -f "Dockerfile" -t dcr-l2jmobius:latest .
+  - docker build --pull --rm -f "Dockerfile" -t l2jmobius_docker:latest .
 
 install:
-  - docker run --rm -it -v /root/compiled:/root/compiled dcr-l2jmobius:latest L2J_Mobius_CT_2.6_HighFive
+  - docker run --rm -it -v /root/compiled:/root/compiled l2jmobius_docker:latest L2J_Mobius_Classic_Interlude
