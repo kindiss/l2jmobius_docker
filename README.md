@@ -1,26 +1,26 @@
-Хочу представить вашему вниманию образ для компиляции исходного кода **L2jMobius** без установки **JDK**, **ANT**, **сред разработки**.
+An image for compiling the **L2jMobius** source code without installing **JDK**, **ANT**, **development environments**.
 ----
 # DCR-TrinityCore
 
 * [BUILD STATUS](#build-status)
 
 ----
-Компиляция происходит в системе **Debian Linux**. 
-Производиться автоматическая установка **ANT** и **JDK 17**.
-Автоматически скачивается репозиторий исходного кода.
+Compilation takes place on a **Debian Linux** system.
+**ANT** and **JDK 17** will be automatically installed.
+The source code repository is automatically downloaded.
 
-Вы с помощью аргументов компиляции определяете какую сборку вам необходимо скомпилировать.
-С помощью монтирования локальной папки в контейнер на выходе получаете готовый скомпилированный архив.
+You use compilation arguments to specify which assembly you want to compile.
+By mounting a local folder into a container, you get a ready-made compiled archive at the output.
 
 ----
 
-**Запуск компиляции:**
+**Compilation run:**
 
 `docker run -d -v {local/path}:/home/ mindevis/dcr-l2jmobius L2J_Mobius_CT_2.6_HighFive`
 
-В данном примере происходит компиляция в фоновом режиме.
+This example compiles in the background.
 
-**Пример:**
+**Example:**
 
 **Windows:** `docker run -d -v D:\compile:/home/ mindevis/dcr-l2jmobius L2J_Mobius_CT_2.6_HighFive`
 
@@ -28,9 +28,9 @@
 
 ----
 
-В данном примере происходит компиляция в интерактивном режиме. Вы можете увидеть весь этап компиляции.
+This example compiles interactively. You can see the entire compilation step.
 
-**Пример:**
+**Example:**
 
 **Windows:** `docker run -it -v D:\compile:/home/ mindevis/dcr-l2jmobius L2J_Mobius_CT_2.6_HighFive`
 
@@ -38,9 +38,9 @@
 
 ----
 
-**Аргументы компиляции**
+**Compilation arguments**
 
-Важно!!!! Может быть использован для компиляции только один аргумент !!!!
+Important!!!! Only one argument can be used for compilation !!!!
 
 <table border="0">
 <tr>
@@ -87,13 +87,13 @@
 
 -v {local/path}:/home/
 
-Путь к папке на локальной машине, не в контейнере!!!!!
+The path to the folder on the local machine, not in the container!!!!!
 
 ----
 
-**ВАЖНО!!!**
+**IMPORTANT!!!**
 
-В настройках Docker для Windows у вас должна быть расшарена папка для контейнера.
+In the Docker settings for Windows, you should have a shared folder for the container.
 
 <img src="https://i.imgur.com/WUdGfHB.png" alt="drawing" />
 
